@@ -4,15 +4,93 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Restaurant Menu</title>
+        <style>
+        /* CSS Muy Sencillo */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+        }
+        #header-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        article {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        article img {
+            width: 100px;
+        }
+        form {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+        }
+        div {
+            margin-bottom: 10px;
+        }
+    </style>
     </head>
     <body>
         <header>
-            <img src="images/restaurant_logo.png" alt="Restaurant Logo" />
+            <img src="images/restaurant_logo.png" alt="Restaurant Logo">
             <h1>Welcome to Our Restaurant</h1>
             <nav>
                 <a href="#menu">Menu</a>
                 <a href="#order_form">Order Form</a>
             </nav>
         </header>
+        <main>
+            <section id="menu">
+                <h2>Menu</h2>
+                <article>
+                    <img src="images/hamburger.png" alt="hamburger">
+                    <h3>The Galactic Hamburger</h3>
+                    <p>A big explosion of flavour of chees and a really good hamburger with secret sausce. <am> Price: $12.00</am></p>
+                </article>
+                <article>
+                    <img src="images/pizza.png" alt="pizza">
+                    <h3>Nebulosa Pizza</h3>
+                    <p>Fresh ingredients and a really good chees. <am> Price: $15.00</am></p>
+                </article>
+                <article>
+                    <img src="images/shake.png" alt="shake">
+                    <h3>Shake Comet</h3>
+                    <p>A vanilla shake with white chocolate chips. <am> Price: $6.00</am></p>
+                </article>
+            </section>
+            <section>
+                <h2>Place Your Order</h2>
+                <form>
+                    <div>
+                        <label for="hamburger_qty">Hamburger quantity: </label>
+                        <input type="number" id="hamburger_qty" name="hamburger_qty" min="0" value="0">
+                    </div>
+                    <p>Add: </p>
+                    <label>
+                        <input type="checkbox" name="extra" value="papas">French Fries
+                    </label>
+                    <label>
+                        <input type="checkbox" name="extra" value="soda">Big Soda
+                    </label>
+                    <p>Meat Tenderness</p>
+                    <label>
+                        <input type="radio" name="coccion" values="medium-rare">Medium medium-rare
+                        <input type="radio" name="coccion" values="rare">Rare
+                    </label>
+                    <p>
+                        <label for="special-requests">Special Requests</label><br>
+                        <textarea id="special-requests" name="special-requests" rows="4" cols="40"></textarea>
+                    </p>
+                    <input type="submit" value="Go to checkout">
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>Made by ibanrichi2</p>
+        </footer>
     </body>
 </html>
